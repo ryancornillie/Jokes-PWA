@@ -25,5 +25,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "jokes-api",
+      "urls": ["https://08ad1pao69.execute-api.us-east-1.amazonaws.com/dev/random_joke"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 20,
+        "maxAge": "1h",
+        "timeout": "10s"
+      }
+    }
   ]
 }
