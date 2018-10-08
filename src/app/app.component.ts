@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { JokesService } from './jokes.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testPWA';
+  joke: any;
+
+  constructor(private jokes: JokesService) {}
+
+  ngOnInit() {
+    this.jokes.getJokes().subscribe(res => {
+      this.joke = res;
+    })
+  }
 }
