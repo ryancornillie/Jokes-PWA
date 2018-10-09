@@ -19,11 +19,13 @@ export class AppComponent {
     })
   }
 
-
-
-  ngOnInit() {
+  getNewJoke() {
     this.jokes.getJokes().subscribe(res => {
       this.joke = res;
     })
+  }
+
+  ngOnInit() {
+    this.getNewJoke();
   }
 }

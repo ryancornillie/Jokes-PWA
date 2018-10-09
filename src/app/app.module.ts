@@ -6,7 +6,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 import { HttpClientModule } from '@angular/common/http'
-import { JokesService } from './jokes.service'
+import { JokesService } from './jokes.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { JokesService } from './jokes.service'
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [JokesService],
   bootstrap: [AppComponent]
