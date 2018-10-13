@@ -9,10 +9,13 @@ import { HttpClientModule } from '@angular/common/http'
 import { JokesService } from './jokes.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatButtonModule, MatSnackBarModule } from '@angular/material';
+import { AppRoutingModule } from './app-routing.module';
+import { NewPageComponent } from './new-page/new-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewPageComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { MatButtonModule, MatSnackBarModule } from '@angular/material';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    AppRoutingModule
   ],
   providers: [JokesService],
   bootstrap: [AppComponent]
